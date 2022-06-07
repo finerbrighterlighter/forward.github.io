@@ -1,0 +1,6 @@
+RewriteEngine On 
+# Take care of www.old.com.au
+RewriteCond %{HTTP_HOST} ^www.hteza.xyz$ [NC] 
+RewriteRule ^(.*)$ http://www.htunteza.com/$1 [L,R=301] 
+RewriteCond %{QUERY_STRING}  ^attachment_id=([0-9]*)$ [NC]
+RewriteRule ^$ http://www.htunteza.com/? [R=301,NE,NC,L]
